@@ -1,5 +1,7 @@
 {
-    "Name":"Ivan",
-    "Lastname":"Ivanov",
-    "Sex":"Male"
+    "Name":"Eoin",
+    "Surname":"Morgan",
+    "Gender":"Male",
+    "Age":"28",
+    "Nationality":"UK"
 }
