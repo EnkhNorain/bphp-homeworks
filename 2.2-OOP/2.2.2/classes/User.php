@@ -1,22 +1,25 @@
-<?php
+<?php 
 class User extends DataRecordModel
 {
     public $name;
     public $email;
     public $password;
     public $rate;
-    public function __construct($name, $email, $password, $rate)
+    public $guid;
+    function __construct($name = null, $email = null, $password = null, $rate = null, $guid = null) 
     {
-        parent::__construct();
+        parent::__construct($guid);
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
         $this->rate = $rate;
     }
-    
-    public function addUserFromForm()
+    public function addUserFromForm() 
     {
-        parent::commit();
+        $this->commit();
     }
-    
+    public function removeUser()
+    {
+        $this->delete();
+    }
 }

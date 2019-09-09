@@ -1,8 +1,5 @@
 <?php
 include 'autoload.php';
 include 'config/SystemConfig.php';
-include 'classes/JsonFileAccessModel.php';
-$jsonObj = new JsonFileAccessModel('new');
-$json = $jsonObj->readJson();
-var_dump($json);
-?>
+$json_file_access_model = new JsonFileAccessModel('new');
+print_r($json_file_access_model->read());

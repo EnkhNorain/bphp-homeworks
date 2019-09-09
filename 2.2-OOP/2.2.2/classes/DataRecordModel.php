@@ -3,11 +3,12 @@ class DataRecordModel
 {
     private $filename;
     private $guid;
-    public function __construct()
+    public function __construct(string $guid = null)
     {
         $this->filename = strtolower(static::class) . 's';
         $this->guid = $guid;
     }
+    
     public function commit()
     {
         $data = new JsonDataArray($this->filename);
